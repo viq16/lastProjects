@@ -1,0 +1,46 @@
+from sympy import *
+import math
+
+#1
+x,y = symbols('x,y')
+
+expr1 = simplify((x**2+x)/(x*sin(y)**2+x*cos(y)**2))
+expr1
+
+#2
+limit((1/x)*log(exp(x) + 1, exp(1)), x, 0)
+
+#3
+listOfX1 = solveset(x**2+2>x**3, x, S.Reals)&solveset(sqrt(x+2,2)>x,x,S.Reals)
+
+#4
+a,b,c = symbols('a,b,c')
+
+solveset(Eq(a*x**3+b*x**2+c*x+d,0), x)
+
+#5
+
+expr2 = diff((sin(x+y)*cos(x*y), x, y).evalf(30)
+expr2.subs({x:-1, y: 2 })
+#expr2.evalf(30)
+
+#6
+a = 3*x**2
+plot(a, diff(a, x), (x, 0, 5))
+
+#7
+
+plot(limit((1+(1/n))**(x*n), n, 0), (x,0,5))
+
+#8
+
+integrate(exp(-x**2), (x, -oo, oo)).evalf(50)
+
+#9
+
+plot(integrate(exp(-x**2)),x)
+
+
+
+
+

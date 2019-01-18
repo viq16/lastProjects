@@ -1,0 +1,30 @@
+Before:
+b[1:1]=['ab']*6
+b[6:]=[2]*10
+b[16:]=['z']*15
+
+1. 
+b[-1]="last"
+
+2.
+b[len(b)//2] = 'x'
+
+3.
+b[1]=['a',2,'zz']
+
+4.
+del b[3:9]
+
+5.
+del b[b.index(2)]
+
+6.
+Zale¿y od której strony indeksujemy(z pocz¹tku czy z koñca)
+
+b[12:1:-1]
+OR
+b[22:11:-1]
+
+ADDITIONAL
+b.count(2)
+b[b.index(2)]

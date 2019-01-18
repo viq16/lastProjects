@@ -1,0 +1,39 @@
+import random
+
+L = [random.uniform(0, 9) for _ in range(41)]
+
+#1
+import statistics as s
+from functools import reduce
+import math
+
+
+s.mean(L)
+s.median(L)
+s.mode(L)
+
+#2
+(x for x in L if x**2 >= 2 and x**2 < 5)
+
+#3
+reduce(lambda x,y: x*y,(b*2**(5*b) for b in L)) - min(v-4+3*math.sin(v)**2 if v > 5 else v**2 + 5*math.cos(v)**3 for v in L)
+
+#4
+max(abs(x-8) for x in L)
+
+#5
+max(i*value - i for i, value in enumerate(L))
+
+#6
+sum(a/b for a in L for b in (2,3,8,9) if a**2 >= b)
+
+Ostatnie z sum¹
+
+from math import fsum
+from fractions import Fraction as F
+
+print(sum(1/d for d in range(1,10001)))
+
+print(fsum(1/d for d in range(1,10001)))
+
+print(sum(F(1,d) for d in range(1,10001)))
